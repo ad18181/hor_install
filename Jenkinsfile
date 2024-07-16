@@ -7,7 +7,7 @@ pipeline {
                 sh '''
                 curl -fsSL https://raw.githubusercontent.com/ZupIT/horusec/master/deployments/scripts/install.sh | bash -s latest
                 horusec version
-                horusec start -p="./src" -o json --json-output-file ${WORKSPACE}/report.json --disbale-docker="true"
+                horusec start -p="./src" -o json --json-output-file ${WORKSPACE}/report.json --disable-docker="true"
                 '''
                 
             }
